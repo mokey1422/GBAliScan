@@ -1,0 +1,680 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84EE595F1C17FADE00045FCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE595E1C17FADE00045FCD /* main.m */; };
+		84EE59621C17FADE00045FCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59611C17FADE00045FCD /* AppDelegate.m */; };
+		84EE59651C17FADE00045FCD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59641C17FADE00045FCD /* ViewController.m */; };
+		84EE59681C17FADF00045FCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EE59661C17FADF00045FCD /* Main.storyboard */; };
+		84EE596A1C17FADF00045FCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84EE59691C17FADF00045FCD /* Assets.xcassets */; };
+		84EE596D1C17FADF00045FCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EE596B1C17FADF00045FCD /* LaunchScreen.storyboard */; };
+		84EE59781C17FADF00045FCD /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59771C17FADF00045FCD /* ____Tests.m */; };
+		84EE59831C17FAE100045FCD /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59821C17FAE100045FCD /* ____UITests.m */; };
+		84EE59EA1C18000200045FCD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84EE59D01C18000200045FCD /* Info.plist */; };
+		84EE59EB1C18000200045FCD /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59D21C18000200045FCD /* MASCompositeConstraint.m */; };
+		84EE59EC1C18000200045FCD /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59D51C18000200045FCD /* MASConstraint.m */; };
+		84EE59ED1C18000200045FCD /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59D71C18000200045FCD /* MASConstraintMaker.m */; };
+		84EE59EE1C18000200045FCD /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59D91C18000200045FCD /* MASLayoutConstraint.m */; };
+		84EE59EF1C18000200045FCD /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59DD1C18000200045FCD /* MASViewAttribute.m */; };
+		84EE59F01C18000200045FCD /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59DF1C18000200045FCD /* MASViewConstraint.m */; };
+		84EE59F11C18000200045FCD /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59E11C18000200045FCD /* NSArray+MASAdditions.m */; };
+		84EE59F21C18000200045FCD /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59E41C18000200045FCD /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		84EE59F31C18000200045FCD /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59E61C18000200045FCD /* View+MASAdditions.m */; };
+		84EE59F41C18000200045FCD /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59E91C18000200045FCD /* ViewController+MASAdditions.m */; };
+		84EE59F71C18119900045FCD /* Scan_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59F61C18119900045FCD /* Scan_VC.m */; };
+		84EE59FA1C195D7F00045FCD /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59F91C195D7F00045FCD /* UIView+SDExtension.m */; };
+		84EE5A0C1C19842700045FCD /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59FC1C19842700045FCD /* bitstream.c */; };
+		84EE5A0D1C19842700045FCD /* mask.c in Sources */ = {isa = PBXBuildFile; fileRef = 84EE59FE1C19842700045FCD /* mask.c */; };
+		84EE5A0E1C19842700045FCD /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE5A011C19842700045FCD /* QRCodeGenerator.m */; };
+		84EE5A0F1C19842700045FCD /* qrencode.c in Sources */ = {isa = PBXBuildFile; fileRef = 84EE5A021C19842700045FCD /* qrencode.c */; };
+		84EE5A101C19842700045FCD /* qrinput.c in Sources */ = {isa = PBXBuildFile; fileRef = 84EE5A041C19842700045FCD /* qrinput.c */; };
+		84EE5A111C19842700045FCD /* qrspec.c in Sources */ = {isa = PBXBuildFile; fileRef = 84EE5A061C19842700045FCD /* qrspec.c */; };
+		84EE5A121C19842700045FCD /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = 84EE5A081C19842700045FCD /* rscode.c */; };
+		84EE5A131C19842700045FCD /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = 84EE5A0A1C19842700045FCD /* split.c */; };
+		84EE5A161C19D18B00045FCD /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE5A151C19D18B00045FCD /* ViewController2.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84EE59741C17FADF00045FCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84EE59521C17FADE00045FCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84EE59591C17FADE00045FCD;
+			remoteInfo = "仿支付宝";
+		};
+		84EE597F1C17FADF00045FCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84EE59521C17FADE00045FCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84EE59591C17FADE00045FCD;
+			remoteInfo = "仿支付宝";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84EE595A1C17FADE00045FCD /* 仿支付宝.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "仿支付宝.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84EE595E1C17FADE00045FCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84EE59601C17FADE00045FCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84EE59611C17FADE00045FCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84EE59631C17FADE00045FCD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		84EE59641C17FADE00045FCD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84EE59671C17FADF00045FCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84EE59691C17FADF00045FCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84EE596C1C17FADF00045FCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84EE596E1C17FADF00045FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84EE59731C17FADF00045FCD /* 仿支付宝Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "仿支付宝Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84EE59771C17FADF00045FCD /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+		84EE59791C17FADF00045FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84EE597E1C17FADF00045FCD /* 仿支付宝UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "仿支付宝UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84EE59821C17FAE100045FCD /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
+		84EE59841C17FAE100045FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84EE59D01C18000200045FCD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84EE59D11C18000200045FCD /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		84EE59D21C18000200045FCD /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		84EE59D31C18000200045FCD /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		84EE59D41C18000200045FCD /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		84EE59D51C18000200045FCD /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		84EE59D61C18000200045FCD /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		84EE59D71C18000200045FCD /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		84EE59D81C18000200045FCD /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		84EE59D91C18000200045FCD /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		84EE59DA1C18000200045FCD /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		84EE59DB1C18000200045FCD /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		84EE59DC1C18000200045FCD /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		84EE59DD1C18000200045FCD /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		84EE59DE1C18000200045FCD /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		84EE59DF1C18000200045FCD /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		84EE59E01C18000200045FCD /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		84EE59E11C18000200045FCD /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		84EE59E21C18000200045FCD /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		84EE59E31C18000200045FCD /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		84EE59E41C18000200045FCD /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		84EE59E51C18000200045FCD /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		84EE59E61C18000200045FCD /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		84EE59E71C18000200045FCD /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		84EE59E81C18000200045FCD /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		84EE59E91C18000200045FCD /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		84EE59F51C18119900045FCD /* Scan_VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scan_VC.h; sourceTree = "<group>"; };
+		84EE59F61C18119900045FCD /* Scan_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scan_VC.m; sourceTree = "<group>"; };
+		84EE59F81C195D7F00045FCD /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		84EE59F91C195D7F00045FCD /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		84EE59FC1C19842700045FCD /* bitstream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitstream.c; sourceTree = "<group>"; };
+		84EE59FD1C19842700045FCD /* bitstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitstream.h; sourceTree = "<group>"; };
+		84EE59FE1C19842700045FCD /* mask.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mask.c; sourceTree = "<group>"; };
+		84EE59FF1C19842700045FCD /* mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mask.h; sourceTree = "<group>"; };
+		84EE5A001C19842700045FCD /* QRCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeGenerator.h; sourceTree = "<group>"; };
+		84EE5A011C19842700045FCD /* QRCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeGenerator.m; sourceTree = "<group>"; };
+		84EE5A021C19842700045FCD /* qrencode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrencode.c; sourceTree = "<group>"; };
+		84EE5A031C19842700045FCD /* qrencode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrencode.h; sourceTree = "<group>"; };
+		84EE5A041C19842700045FCD /* qrinput.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrinput.c; sourceTree = "<group>"; };
+		84EE5A051C19842700045FCD /* qrinput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrinput.h; sourceTree = "<group>"; };
+		84EE5A061C19842700045FCD /* qrspec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrspec.c; sourceTree = "<group>"; };
+		84EE5A071C19842700045FCD /* qrspec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrspec.h; sourceTree = "<group>"; };
+		84EE5A081C19842700045FCD /* rscode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rscode.c; sourceTree = "<group>"; };
+		84EE5A091C19842700045FCD /* rscode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rscode.h; sourceTree = "<group>"; };
+		84EE5A0A1C19842700045FCD /* split.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = split.c; sourceTree = "<group>"; };
+		84EE5A0B1C19842700045FCD /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
+		84EE5A141C19D18B00045FCD /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		84EE5A151C19D18B00045FCD /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84EE59571C17FADE00045FCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84EE59701C17FADF00045FCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84EE597B1C17FADF00045FCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84EE59511C17FADE00045FCD = {
+			isa = PBXGroup;
+			children = (
+				84EE595C1C17FADE00045FCD /* 仿支付宝 */,
+				84EE59761C17FADF00045FCD /* 仿支付宝Tests */,
+				84EE59811C17FAE000045FCD /* 仿支付宝UITests */,
+				84EE595B1C17FADE00045FCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84EE595B1C17FADE00045FCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84EE595A1C17FADE00045FCD /* 仿支付宝.app */,
+				84EE59731C17FADF00045FCD /* 仿支付宝Tests.xctest */,
+				84EE597E1C17FADF00045FCD /* 仿支付宝UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84EE595C1C17FADE00045FCD /* 仿支付宝 */ = {
+			isa = PBXGroup;
+			children = (
+				84EE59FB1C19842700045FCD /* libqrencode */,
+				84EE59CF1C18000200045FCD /* Masonry */,
+				84EE59601C17FADE00045FCD /* AppDelegate.h */,
+				84EE59611C17FADE00045FCD /* AppDelegate.m */,
+				84EE59631C17FADE00045FCD /* ViewController.h */,
+				84EE59641C17FADE00045FCD /* ViewController.m */,
+				84EE59F81C195D7F00045FCD /* UIView+SDExtension.h */,
+				84EE59F91C195D7F00045FCD /* UIView+SDExtension.m */,
+				84EE59F51C18119900045FCD /* Scan_VC.h */,
+				84EE59F61C18119900045FCD /* Scan_VC.m */,
+				84EE5A141C19D18B00045FCD /* ViewController2.h */,
+				84EE5A151C19D18B00045FCD /* ViewController2.m */,
+				84EE59661C17FADF00045FCD /* Main.storyboard */,
+				84EE59691C17FADF00045FCD /* Assets.xcassets */,
+				84EE596B1C17FADF00045FCD /* LaunchScreen.storyboard */,
+				84EE596E1C17FADF00045FCD /* Info.plist */,
+				84EE595D1C17FADE00045FCD /* Supporting Files */,
+			);
+			path = "仿支付宝";
+			sourceTree = "<group>";
+		};
+		84EE595D1C17FADE00045FCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84EE595E1C17FADE00045FCD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84EE59761C17FADF00045FCD /* 仿支付宝Tests */ = {
+			isa = PBXGroup;
+			children = (
+				84EE59771C17FADF00045FCD /* ____Tests.m */,
+				84EE59791C17FADF00045FCD /* Info.plist */,
+			);
+			path = "仿支付宝Tests";
+			sourceTree = "<group>";
+		};
+		84EE59811C17FAE000045FCD /* 仿支付宝UITests */ = {
+			isa = PBXGroup;
+			children = (
+				84EE59821C17FAE100045FCD /* ____UITests.m */,
+				84EE59841C17FAE100045FCD /* Info.plist */,
+			);
+			path = "仿支付宝UITests";
+			sourceTree = "<group>";
+		};
+		84EE59CF1C18000200045FCD /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				84EE59D01C18000200045FCD /* Info.plist */,
+				84EE59D11C18000200045FCD /* MASCompositeConstraint.h */,
+				84EE59D21C18000200045FCD /* MASCompositeConstraint.m */,
+				84EE59D31C18000200045FCD /* MASConstraint+Private.h */,
+				84EE59D41C18000200045FCD /* MASConstraint.h */,
+				84EE59D51C18000200045FCD /* MASConstraint.m */,
+				84EE59D61C18000200045FCD /* MASConstraintMaker.h */,
+				84EE59D71C18000200045FCD /* MASConstraintMaker.m */,
+				84EE59D81C18000200045FCD /* MASLayoutConstraint.h */,
+				84EE59D91C18000200045FCD /* MASLayoutConstraint.m */,
+				84EE59DA1C18000200045FCD /* Masonry.h */,
+				84EE59DB1C18000200045FCD /* MASUtilities.h */,
+				84EE59DC1C18000200045FCD /* MASViewAttribute.h */,
+				84EE59DD1C18000200045FCD /* MASViewAttribute.m */,
+				84EE59DE1C18000200045FCD /* MASViewConstraint.h */,
+				84EE59DF1C18000200045FCD /* MASViewConstraint.m */,
+				84EE59E01C18000200045FCD /* NSArray+MASAdditions.h */,
+				84EE59E11C18000200045FCD /* NSArray+MASAdditions.m */,
+				84EE59E21C18000200045FCD /* NSArray+MASShorthandAdditions.h */,
+				84EE59E31C18000200045FCD /* NSLayoutConstraint+MASDebugAdditions.h */,
+				84EE59E41C18000200045FCD /* NSLayoutConstraint+MASDebugAdditions.m */,
+				84EE59E51C18000200045FCD /* View+MASAdditions.h */,
+				84EE59E61C18000200045FCD /* View+MASAdditions.m */,
+				84EE59E71C18000200045FCD /* View+MASShorthandAdditions.h */,
+				84EE59E81C18000200045FCD /* ViewController+MASAdditions.h */,
+				84EE59E91C18000200045FCD /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		84EE59FB1C19842700045FCD /* libqrencode */ = {
+			isa = PBXGroup;
+			children = (
+				84EE59FC1C19842700045FCD /* bitstream.c */,
+				84EE59FD1C19842700045FCD /* bitstream.h */,
+				84EE59FE1C19842700045FCD /* mask.c */,
+				84EE59FF1C19842700045FCD /* mask.h */,
+				84EE5A001C19842700045FCD /* QRCodeGenerator.h */,
+				84EE5A011C19842700045FCD /* QRCodeGenerator.m */,
+				84EE5A021C19842700045FCD /* qrencode.c */,
+				84EE5A031C19842700045FCD /* qrencode.h */,
+				84EE5A041C19842700045FCD /* qrinput.c */,
+				84EE5A051C19842700045FCD /* qrinput.h */,
+				84EE5A061C19842700045FCD /* qrspec.c */,
+				84EE5A071C19842700045FCD /* qrspec.h */,
+				84EE5A081C19842700045FCD /* rscode.c */,
+				84EE5A091C19842700045FCD /* rscode.h */,
+				84EE5A0A1C19842700045FCD /* split.c */,
+				84EE5A0B1C19842700045FCD /* split.h */,
+			);
+			path = libqrencode;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84EE59591C17FADE00045FCD /* 仿支付宝 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84EE59871C17FAE100045FCD /* Build configuration list for PBXNativeTarget "仿支付宝" */;
+			buildPhases = (
+				84EE59561C17FADE00045FCD /* Sources */,
+				84EE59571C17FADE00045FCD /* Frameworks */,
+				84EE59581C17FADE00045FCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "仿支付宝";
+			productName = "仿支付宝";
+			productReference = 84EE595A1C17FADE00045FCD /* 仿支付宝.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84EE59721C17FADF00045FCD /* 仿支付宝Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84EE598A1C17FAE100045FCD /* Build configuration list for PBXNativeTarget "仿支付宝Tests" */;
+			buildPhases = (
+				84EE596F1C17FADF00045FCD /* Sources */,
+				84EE59701C17FADF00045FCD /* Frameworks */,
+				84EE59711C17FADF00045FCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84EE59751C17FADF00045FCD /* PBXTargetDependency */,
+			);
+			name = "仿支付宝Tests";
+			productName = "仿支付宝Tests";
+			productReference = 84EE59731C17FADF00045FCD /* 仿支付宝Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84EE597D1C17FADF00045FCD /* 仿支付宝UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84EE598D1C17FAE100045FCD /* Build configuration list for PBXNativeTarget "仿支付宝UITests" */;
+			buildPhases = (
+				84EE597A1C17FADF00045FCD /* Sources */,
+				84EE597B1C17FADF00045FCD /* Frameworks */,
+				84EE597C1C17FADF00045FCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84EE59801C17FADF00045FCD /* PBXTargetDependency */,
+			);
+			name = "仿支付宝UITests";
+			productName = "仿支付宝UITests";
+			productReference = 84EE597E1C17FADF00045FCD /* 仿支付宝UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84EE59521C17FADE00045FCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = zhangguobing;
+				TargetAttributes = {
+					84EE59591C17FADE00045FCD = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					84EE59721C17FADF00045FCD = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 84EE59591C17FADE00045FCD;
+					};
+					84EE597D1C17FADF00045FCD = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 84EE59591C17FADE00045FCD;
+					};
+				};
+			};
+			buildConfigurationList = 84EE59551C17FADE00045FCD /* Build configuration list for PBXProject "仿支付宝" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84EE59511C17FADE00045FCD;
+			productRefGroup = 84EE595B1C17FADE00045FCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84EE59591C17FADE00045FCD /* 仿支付宝 */,
+				84EE59721C17FADF00045FCD /* 仿支付宝Tests */,
+				84EE597D1C17FADF00045FCD /* 仿支付宝UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84EE59581C17FADE00045FCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84EE59EA1C18000200045FCD /* Info.plist in Resources */,
+				84EE596D1C17FADF00045FCD /* LaunchScreen.storyboard in Resources */,
+				84EE596A1C17FADF00045FCD /* Assets.xcassets in Resources */,
+				84EE59681C17FADF00045FCD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84EE59711C17FADF00045FCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84EE597C1C17FADF00045FCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84EE59561C17FADE00045FCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84EE5A0F1C19842700045FCD /* qrencode.c in Sources */,
+				84EE59F21C18000200045FCD /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				84EE59F01C18000200045FCD /* MASViewConstraint.m in Sources */,
+				84EE5A121C19842700045FCD /* rscode.c in Sources */,
+				84EE59EB1C18000200045FCD /* MASCompositeConstraint.m in Sources */,
+				84EE5A161C19D18B00045FCD /* ViewController2.m in Sources */,
+				84EE5A111C19842700045FCD /* qrspec.c in Sources */,
+				84EE59F11C18000200045FCD /* NSArray+MASAdditions.m in Sources */,
+				84EE59651C17FADE00045FCD /* ViewController.m in Sources */,
+				84EE5A0E1C19842700045FCD /* QRCodeGenerator.m in Sources */,
+				84EE59F71C18119900045FCD /* Scan_VC.m in Sources */,
+				84EE59621C17FADE00045FCD /* AppDelegate.m in Sources */,
+				84EE5A131C19842700045FCD /* split.c in Sources */,
+				84EE5A0C1C19842700045FCD /* bitstream.c in Sources */,
+				84EE5A0D1C19842700045FCD /* mask.c in Sources */,
+				84EE59EE1C18000200045FCD /* MASLayoutConstraint.m in Sources */,
+				84EE595F1C17FADE00045FCD /* main.m in Sources */,
+				84EE59F41C18000200045FCD /* ViewController+MASAdditions.m in Sources */,
+				84EE59F31C18000200045FCD /* View+MASAdditions.m in Sources */,
+				84EE59EF1C18000200045FCD /* MASViewAttribute.m in Sources */,
+				84EE59EC1C18000200045FCD /* MASConstraint.m in Sources */,
+				84EE5A101C19842700045FCD /* qrinput.c in Sources */,
+				84EE59FA1C195D7F00045FCD /* UIView+SDExtension.m in Sources */,
+				84EE59ED1C18000200045FCD /* MASConstraintMaker.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84EE596F1C17FADF00045FCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84EE59781C17FADF00045FCD /* ____Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84EE597A1C17FADF00045FCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84EE59831C17FAE100045FCD /* ____UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84EE59751C17FADF00045FCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84EE59591C17FADE00045FCD /* 仿支付宝 */;
+			targetProxy = 84EE59741C17FADF00045FCD /* PBXContainerItemProxy */;
+		};
+		84EE59801C17FADF00045FCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84EE59591C17FADE00045FCD /* 仿支付宝 */;
+			targetProxy = 84EE597F1C17FADF00045FCD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84EE59661C17FADF00045FCD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84EE59671C17FADF00045FCD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84EE596B1C17FADF00045FCD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84EE596C1C17FADF00045FCD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84EE59851C17FAE100045FCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84EE59861C17FAE100045FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84EE59881C17FAE100045FCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "仿支付宝/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhangguobing.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84EE59891C17FAE100045FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "仿支付宝/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhangguobing.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		84EE598B1C17FAE100045FCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "仿支付宝Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhangguobing.----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/仿支付宝.app/仿支付宝";
+			};
+			name = Debug;
+		};
+		84EE598C1C17FAE100045FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "仿支付宝Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhangguobing.----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/仿支付宝.app/仿支付宝";
+			};
+			name = Release;
+		};
+		84EE598E1C17FAE100045FCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "仿支付宝UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhangguobing.----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "仿支付宝";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		84EE598F1C17FAE100045FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "仿支付宝UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhangguobing.----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "仿支付宝";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84EE59551C17FADE00045FCD /* Build configuration list for PBXProject "仿支付宝" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84EE59851C17FAE100045FCD /* Debug */,
+				84EE59861C17FAE100045FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84EE59871C17FAE100045FCD /* Build configuration list for PBXNativeTarget "仿支付宝" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84EE59881C17FAE100045FCD /* Debug */,
+				84EE59891C17FAE100045FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84EE598A1C17FAE100045FCD /* Build configuration list for PBXNativeTarget "仿支付宝Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84EE598B1C17FAE100045FCD /* Debug */,
+				84EE598C1C17FAE100045FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84EE598D1C17FAE100045FCD /* Build configuration list for PBXNativeTarget "仿支付宝UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84EE598E1C17FAE100045FCD /* Debug */,
+				84EE598F1C17FAE100045FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84EE59521C17FADE00045FCD /* Project object */;
+}
