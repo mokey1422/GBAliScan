@@ -33,7 +33,7 @@
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    //
+    //主要是解决一下系统前后台切换的过程中动画被强制终端的情况
     [[NSNotificationCenter defaultCenter]postNotificationName:@"EnterForeground" object:self];
 }
 

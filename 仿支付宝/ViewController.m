@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "Scan_VC.h"
 #import "QRCodeGenerator.h"
+#import "ZXingObjC.h"
+#define iOS8 [[UIDevice currentDevice].systemVersion floatValue] >= 8.0
 #define RandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1]
 @interface ViewController ()<UITextFieldDelegate>{
    
@@ -24,7 +26,7 @@
 @implementation ViewController
 
 -(void)viewWillAppear:(BOOL)animated{
-    
+    [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     
 }
@@ -36,6 +38,7 @@
      *  ios7之前我们实现二维码扫描一般是借助第三方来实现，但是在ios7之后系统自己提供二维码扫面的方法，而且用原生的方法性能要比第三方的要好很多，今天就写个小的demo来介绍一下系统的原生二维码扫描实现的过程
      *  部分代码借鉴高少东的支付宝开源项目做了一下整理和优化
      *  二维码参考样式无非就是支付宝和微信两大巨头的样式，今天仿写一下支付宝的二维码扫描
+     *
      *  顺便熟悉一下 masonry
      *
      */
@@ -57,8 +60,9 @@
     _outImageView.layer.borderColor=[UIColor redColor].CGColor;
     _outImageView.userInteractionEnabled=YES;
     UIImage *image=[UIImage imageNamed:@"6824500_006_thumb.jpg"];
-    UIImage*tempImage=[QRCodeGenerator qrImageForString:@"ssssss" imageSize:360 Topimg:image withColor:RandomColor];
+    UIImage*tempImage=[QRCodeGenerator qrImageForString:@"ssssss" imageSize:360 Topimg:image withColor:[UIColor greenColor]];
     _outImageView.image=tempImage;
+    _outImageView.contentMode=UIViewContentModeScaleToFill;
     UILongPressGestureRecognizer*longPress=[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(dealLongPress:)];
     [_outImageView addGestureRecognizer:longPress];
     [self.view addSubview:_outImageView];
@@ -76,6 +80,7 @@
     //5.定时器
     _timer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(create) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop]addTimer:_timer forMode:NSRunLoopCommonModes];
+    _timer.fireDate=[NSDate distantFuture];
     
     
 }
@@ -139,8 +144,8 @@
         tempStr=self.textField.text;
         
     }
-    UIImage*tempImage=[QRCodeGenerator qrImageForString:tempStr imageSize:360 Topimg:image withColor:RandomColor];
-    
+    UIImage*tempImage=[QRCodeGenerator qrImageForString:tempStr imageSize:360 Topimg:image withColor:[UIColor blackColor]];
+
     _outImageView.image=tempImage;
     
 }
@@ -154,19 +159,62 @@
         
         UIImageView*tempImageView=(UIImageView*)gesture.view;
         if(tempImageView.image){
-            //1. 初始化扫描仪，设置设别类型和识别质量
-            CIDetector*detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{ CIDetectorAccuracy : CIDetectorAccuracyHigh }];
-            //2. 扫描获取的特征组
-            NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:tempImageView.image.CGImage]];
-            //3. 获取扫描结果
-            CIQRCodeFeature *feature = [features objectAtIndex:0];
-            NSString *scannedResult = feature.messageString;
-            UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"扫描结果" message:scannedResult delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-            [alertView show];
-        }else {
             
-            UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"扫描结果" message:@"您还没有生成二维码" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-            [alertView show];
+
+            if(iOS8){
+    
+                /**ios8环境以上 */
+                 //初始化一个监测器
+                CIDetector*detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{ CIDetectorAccuracy : CIDetectorAccuracyHigh }];
+                
+                CGImageRef imageToDecode=tempImageView.image.CGImage;
+                //监测到的结果数组
+                NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:imageToDecode]];
+                if (features.count >=1) {
+                    /**结果对象 */
+                    CIQRCodeFeature *feature = [features objectAtIndex:0];
+                    NSString *scannedResult = feature.messageString;
+                    UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"扫描结果" message:scannedResult delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                    [alertView show];
+
+                }
+                else{
+                    UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"该图片没有包含一个二维码！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                    [alertView show];
+                    
+                }
+
+                
+                
+            }else{
+            
+            CGImageRef imageToDecode=tempImageView.image.CGImage;
+            
+            ZXLuminanceSource *source = [[ZXCGImageLuminanceSource alloc] initWithCGImage:imageToDecode];
+            ZXBinaryBitmap *bitmap = [ZXBinaryBitmap binaryBitmapWithBinarizer:[ZXHybridBinarizer binarizerWithSource:source]];
+            
+            NSError *error = nil;
+            
+            ZXDecodeHints *hints = [ZXDecodeHints hints];
+            /**识别器 */
+            ZXMultiFormatReader *reader = [ZXMultiFormatReader reader];
+            ZXResult *result = [reader decode:bitmap
+                                        hints:hints
+                                        error:&error];
+            if (result) {
+                
+                NSString *contents = result.text;
+                UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"扫描结果" message:contents delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                [alertView show];
+                /**扫描到的类型-> */
+                ZXBarcodeFormat format = result.barcodeFormat;
+                NSLog(@"%d",format);
+            } else {
+                
+                UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"该图片没有包含一个二维码！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                [alertView show];
+                
+            }
         }
         
         
@@ -177,6 +225,7 @@
     }
     
     
+}
 }
 #pragma mark->textFiel delegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{

@@ -9,8 +9,11 @@
 #import <AVFoundation/AVFoundation.h>
 #import "UIView+SDExtension.h"
 #import "ViewController2.h"
+#import "ZXingObjC.h"
+#define iOS8 [[UIDevice currentDevice].systemVersion floatValue] >= 8.0
 static const CGFloat kBorderW = 100;
 static const CGFloat kMargin = 30;
+
 @interface Scan_VC ()<UIAlertViewDelegate,AVCaptureMetadataOutputObjectsDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>{
     
     
@@ -26,6 +29,7 @@ static const CGFloat kMargin = 30;
     
     self.navigationController.navigationBar.hidden=YES;
     [self resumeAnimation];
+
     
 }
 -(void)viewDidDisappear:(BOOL)animated{
@@ -35,7 +39,7 @@ static const CGFloat kMargin = 30;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //这个属性必须打开否则返回的时候会出现黑边
+    // 这个属性必须打开否则返回的时候会出现黑边
     self.view.clipsToBounds=YES;
     //1.遮罩
     [self setupMaskView];
@@ -229,6 +233,7 @@ static const CGFloat kMargin = 30;
         controller.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
         //4.随便给他一个转场动画
         controller.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
+        controller.allowsEditing=YES;
         [self presentViewController:controller animated:YES completion:NULL];
         
     }else{
@@ -238,15 +243,29 @@ static const CGFloat kMargin = 30;
     }
     
 }
+
 #pragma mark-> imagePickerController delegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    /**这种方法是ios8之后提供的方法，ios8之前是不能用的,我尝试用之前的第三方去替代结果表示并不是很理想，很显然系统提供的api无论是从识别效率还是识别准确度上都要比第三方的强，我尝试用一个自定义背景色的二维码去被识别但是第三方提取不到信息，系统的可以提取到。这里说的取不到是在系统从相册中提取原图的时候上面的二维码信息提取不到，但是我这里把相册的编辑属性打开，取编辑之后的图片之后奇迹般的获取到了信息，真是奇葩 */
     //1.获取选择的图片
-    UIImage *image = info[UIImagePickerControllerOriginalImage];
-    //2.初始化一个监测器
-    CIDetector*detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{ CIDetectorAccuracy : CIDetectorAccuracyHigh }];
-    
+    UIImage *pickImage =[info objectForKey:@"UIImagePickerControllerEditedImage"];
+   
     [picker dismissViewControllerAnimated:YES completion:^{
+        
+        [self decodeImage:pickImage];
+    }];
+    
+    
+}
+/**识别图片中的二维码信息 */
+-(void)decodeImage:(UIImage*)image{
+    /**这里你完全可以向下兼容没必要用ios8以上的api但是这里这么写主要是为了介绍ios8后提供的这个api，而且性能和识别率要高于第三方 */
+    if(iOS8){
+        /**ios8环境以上 */
+
+         //初始化一个监测器
+        CIDetector*detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{ CIDetectorAccuracy : CIDetectorAccuracyHigh }];
         //监测到的结果数组
         NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:image.CGImage]];
         if (features.count >=1) {
@@ -255,16 +274,45 @@ static const CGFloat kMargin = 30;
             NSString *scannedResult = feature.messageString;
             UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"扫描结果" message:scannedResult delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
             [alertView show];
-          
+
         }
         else{
             UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"该图片没有包含一个二维码！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
             [alertView show];
-            
+
         }
-        
-  
-    }];
+        }else{
+        /**ios8环境以下 */
+
+        CGImageRef imageToDecode = image.CGImage;
+
+        ZXLuminanceSource *source = [[ZXCGImageLuminanceSource alloc] initWithCGImage:imageToDecode];
+        ZXBinaryBitmap *bitmap = [ZXBinaryBitmap binaryBitmapWithBinarizer:[ZXHybridBinarizer binarizerWithSource:source]];
+
+        NSError *error = nil;
+
+        ZXDecodeHints *hints = [ZXDecodeHints hints];
+
+        ZXMultiFormatReader *reader = [ZXMultiFormatReader reader];
+        ZXResult *result = [reader decode:bitmap
+                                    hints:hints
+                                    error:&error];
+        if (result) {
+
+            NSString *contents = result.text;
+            NSLog(@"contents =%@",contents);
+            UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"解析成功" message:contents delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            [alter show];
+
+        } else {
+            UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"解析失败" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            [alter show];
+        }
+
+
+    }
+    
+
     
     
 }
