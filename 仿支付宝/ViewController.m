@@ -63,10 +63,12 @@
     UIImage *image=[UIImage imageNamed:@"6824500_006_thumb.jpg"];
 #ifdef DEFAULT
     /**普通默认黑色 */
-    UIImage*tempImage=[QRCodeGenerator qrImageForString:@"ssssss" imageSize:360 Topimg:image withColor:[UIColor greenColor]];
+     UIImage*tempImage=[QRCodeGenerator qrImageForString:@"sssssssss" imageSize:360 Topimg:image];
+  
 #else
     /**彩色二维码 */
-    UIImage*tempImage=[QRCodeGenerator qrImageForString:@"sssssssss" imageSize:360 Topimg:image];
+   
+      UIImage*tempImage=[QRCodeGenerator qrImageForString:@"ssssss" imageSize:360 Topimg:image withColor:RandomColor];
 #endif
     
     _outImageView.image=tempImage;
