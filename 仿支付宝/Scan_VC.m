@@ -192,6 +192,7 @@ static const CGFloat kMargin = 30;
     _session = [[AVCaptureSession alloc]init];
     //高质量采集率
     [_session setSessionPreset:AVCaptureSessionPresetHigh];
+
     [_session addInput:input];
     [_session addOutput:output];
     //设置扫码支持的编码格式(如下设置条形码和二维码兼容)

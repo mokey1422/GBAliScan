@@ -12,7 +12,9 @@
 #import "ZXingObjC.h"
 #define iOS8 [[UIDevice currentDevice].systemVersion floatValue] >= 8.0
 #define RandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1]
+
 #define DEFAULT 0
+
 @interface ViewController ()<UITextFieldDelegate>{
    
     NSTimer*_timer;
@@ -61,6 +63,7 @@
     _outImageView.layer.borderColor=[UIColor redColor].CGColor;
     _outImageView.userInteractionEnabled=YES;
     UIImage *image=[UIImage imageNamed:@"6824500_006_thumb.jpg"];
+
 #ifdef DEFAULT
     /**普通默认黑色 */
      UIImage*tempImage=[QRCodeGenerator qrImageForString:@"sssssssss" imageSize:360 Topimg:image];
@@ -71,6 +74,7 @@
       UIImage*tempImage=[QRCodeGenerator qrImageForString:@"ssssss" imageSize:360 Topimg:image withColor:RandomColor];
 #endif
     
+
     _outImageView.image=tempImage;
     _outImageView.contentMode=UIViewContentModeScaleToFill;
     UILongPressGestureRecognizer*longPress=[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(dealLongPress:)];
@@ -90,7 +94,7 @@
     //5.定时器
     _timer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(create) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop]addTimer:_timer forMode:NSRunLoopCommonModes];
-    
+
     
     
 }
@@ -132,6 +136,7 @@
         
     }];
     
+
 }
 #pragma mark-> 二维码扫描
 -(void)scan{
@@ -153,6 +158,7 @@
         tempStr=self.textField.text;
         
     }
+
     UIImage*tempImage=[QRCodeGenerator qrImageForString:tempStr imageSize:360 Topimg:image withColor:RandomColor];
 
     _outImageView.image=tempImage;
