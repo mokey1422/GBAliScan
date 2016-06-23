@@ -12,7 +12,7 @@
 
 #直接上效果图吧：<br>
 
-![](https://github.com/mokey1422/gifResourceOther/blob/master/GBAliScan.gif)<br>
+![](https://github.com/mokey1422/gifResourceOther/blob/master/GBAliScan.gif)
 ![](https://github.com/mokey1422/gifResourceOther/blob/master/2016-06-23%2022_16_30.gif)<br>
 ###补充说明：<br>
 * 录制gif图的时候忘记了一步操作，就是二维码图片长按触发识别操作。这点在效果图上没有显示出来，自己看项目中的代码吧，很简单<br>
