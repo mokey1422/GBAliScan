@@ -117,6 +117,7 @@
     CGImageRelease(imageRef);
     CGColorSpaceRelease(colorSpace);
     CGContextRelease(context);
+    CGDataProviderRelease(dataProvider);
     return resultImage;
     
 }

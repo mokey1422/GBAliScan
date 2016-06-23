@@ -86,7 +86,7 @@ enum {
     [qrImage drawInRect:CGRectMake(0, 0, qrImage.size.width, qrImage.size.height)];
     
     //Draw image1
-        float r=qrImage.size.width*35/240;
+    float r=qrImage.size.width*35/240;
     [topimg drawInRect:CGRectMake((qrImage.size.width-r)/2, (qrImage.size.height-r)/2 ,r, r)];
 
     qrImage=UIGraphicsGetImageFromCurrentImageContext();
@@ -166,7 +166,6 @@ enum {
 	if (![string length]) {
 		return nil;
 	}
-    
 	QRcode *code = QRcode_encodeString([string UTF8String], 0, QR_ECLEVEL_L, QR_MODE_8, 1);
 	if (!code) {
 		return nil;

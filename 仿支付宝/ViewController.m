@@ -56,7 +56,7 @@
      *   经过测试，识别还是同样的问题，问题在于现在系统只能识别一些简单的图像，对于那些有填充色的图像识别还是不太好用，既然找到了问题我们在识别的时候可不可以暂时恢复成二维码只有黑白的图像，这样我们就可以顺利识别了
      *   经过验证恢复成黑白像只有部分是可以的，看来只有通过逆向推理去一层层解析到之前的二维码内容，做加法是无效的只能做减法。
      *   暂时说这么多，未完待续。。。
-     *
+     *   以后我会把自定义二维码长按识别的问题解决一下，这一版暂时不去做了还有别的事情，有空我给添加上。
      *
      */
     //1.
@@ -228,6 +228,7 @@
                 CGImageRef imageToDecode=tempImageView.image.CGImage;
                 //监测到的结果数组
                 NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:imageToDecode]];
+                CGImageRelease(imageToDecode);
                 if (features.count >=1) {
                     /**结果对象 */
                     CIQRCodeFeature *feature = [features objectAtIndex:0];
@@ -248,6 +249,7 @@
             
             CGImageRef imageToDecode=tempImageView.image.CGImage;
             ZXLuminanceSource *source = [[ZXCGImageLuminanceSource alloc] initWithCGImage:imageToDecode];
+            CGImageRelease(imageToDecode);
             ZXBinaryBitmap *bitmap = [ZXBinaryBitmap binaryBitmapWithBinarizer:[ZXHybridBinarizer binarizerWithSource:source]];
             
             NSError *error = nil;

@@ -27,6 +27,7 @@
     addRoundRectToPath(context, rect, radius, image.CGImage);
     CGImageRef imageMasked = CGBitmapContextCreateImage(context);
     UIImage * img = [UIImage imageWithCGImage: imageMasked];
+    
     CGContextRelease(context);
     CGColorSpaceRelease(colorSpace);
     CGImageRelease(imageMasked);

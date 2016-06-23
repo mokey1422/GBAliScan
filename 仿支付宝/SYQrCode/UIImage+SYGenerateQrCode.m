@@ -155,6 +155,7 @@
     CIFilter * filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
     [filter setValue:data forKey:@"inputMessage"];
     [filter setValue:@"M" forKey:@"inputCorrectionLevel"];
+    
     return filter.outputImage;
 }
 
@@ -179,10 +180,16 @@
     CGContextScaleCTM(contextRef, scale, scale);
     CGContextDrawImage(contextRef, extent, imageRef);
     CGImageRef imageRefResized = CGBitmapContextCreateImage(contextRef);
+    
+    UIImage*tempIMage=[UIImage imageWithCGImage:imageRefResized];
+    
     //释放
     CGContextRelease(contextRef);
     CGImageRelease(imageRef);
-    return [UIImage imageWithCGImage:imageRefResized];
+    CGColorSpaceRelease(colorSpaceRef);
+    CGImageRelease(imageRefResized);
+    return tempIMage;
+    
 }
 
 

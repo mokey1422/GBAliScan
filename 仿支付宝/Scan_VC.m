@@ -289,6 +289,7 @@ static const CGFloat kMargin = 30;
         CGImageRef imageToDecode = image.CGImage;
 
         ZXLuminanceSource *source = [[ZXCGImageLuminanceSource alloc] initWithCGImage:imageToDecode];
+        CGImageRelease(imageToDecode);
         ZXBinaryBitmap *bitmap = [ZXBinaryBitmap binaryBitmapWithBinarizer:[ZXHybridBinarizer binarizerWithSource:source]];
 
         NSError *error = nil;
