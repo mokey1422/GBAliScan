@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843C27701D1BBB2800DD94EF /* 85923.png in Resources */ = {isa = PBXBuildFile; fileRef = 843C275E1D1BBB2800DD94EF /* 85923.png */; };
+		843C27711D1BBB2800DD94EF /* 85923Select.png in Resources */ = {isa = PBXBuildFile; fileRef = 843C275F1D1BBB2800DD94EF /* 85923Select.png */; };
+		843C27721D1BBB2800DD94EF /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 843C27601D1BBB2800DD94EF /* back.png */; };
+		843C27731D1BBB2800DD94EF /* photoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 843C27611D1BBB2800DD94EF /* photoImage.png */; };
+		843C27741D1BBB2800DD94EF /* SYColorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C27631D1BBB2800DD94EF /* SYColorModel.m */; };
+		843C27751D1BBB2800DD94EF /* SYQrCodeScanne.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C27661D1BBB2800DD94EF /* SYQrCodeScanne.m */; };
+		843C27761D1BBB2800DD94EF /* UIImage+SYGenerateQrCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C27681D1BBB2800DD94EF /* UIImage+SYGenerateQrCode.m */; };
+		843C27771D1BBB2800DD94EF /* UIImage+SYQrCodeDiversification.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C276A1D1BBB2800DD94EF /* UIImage+SYQrCodeDiversification.m */; };
+		843C27781D1BBB2800DD94EF /* UIImage+SYRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C276C1D1BBB2800DD94EF /* UIImage+SYRoundImage.m */; };
+		843C27791D1BBB2800DD94EF /* whiteBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 843C276D1D1BBB2800DD94EF /* whiteBG.png */; };
+		843C277A1D1BBB2800DD94EF /* 扫描框@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843C276E1D1BBB2800DD94EF /* 扫描框@2x.png */; };
+		843C277B1D1BBB2800DD94EF /* 扫描线@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843C276F1D1BBB2800DD94EF /* 扫描线@2x.png */; };
+		843C277F1D1BBF8C00DD94EF /* backImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 843C277C1D1BBF8C00DD94EF /* backImage.png */; };
+		843C27801D1BBF8C00DD94EF /* 形状222.png in Resources */ = {isa = PBXBuildFile; fileRef = 843C277D1D1BBF8C00DD94EF /* 形状222.png */; };
+		843C27811D1BBF8C00DD94EF /* 形状111.png in Resources */ = {isa = PBXBuildFile; fileRef = 843C277E1D1BBF8C00DD94EF /* 形状111.png */; };
 		847556801C523A8C004EA93C /* ZXAztecDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8475549A1C523A8C004EA93C /* ZXAztecDecoder.m */; };
 		847556811C523A8C004EA93C /* ZXAztecDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 8475549D1C523A8C004EA93C /* ZXAztecDetector.m */; };
 		847556821C523A8C004EA93C /* ZXAztecBinaryShiftToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 847554A01C523A8C004EA93C /* ZXAztecBinaryShiftToken.m */; };
@@ -277,6 +292,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		843C275E1D1BBB2800DD94EF /* 85923.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 85923.png; sourceTree = "<group>"; };
+		843C275F1D1BBB2800DD94EF /* 85923Select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 85923Select.png; sourceTree = "<group>"; };
+		843C27601D1BBB2800DD94EF /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		843C27611D1BBB2800DD94EF /* photoImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photoImage.png; sourceTree = "<group>"; };
+		843C27621D1BBB2800DD94EF /* SYColorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYColorModel.h; sourceTree = "<group>"; };
+		843C27631D1BBB2800DD94EF /* SYColorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYColorModel.m; sourceTree = "<group>"; };
+		843C27641D1BBB2800DD94EF /* SYQrCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYQrCode.h; sourceTree = "<group>"; };
+		843C27651D1BBB2800DD94EF /* SYQrCodeScanne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYQrCodeScanne.h; sourceTree = "<group>"; };
+		843C27661D1BBB2800DD94EF /* SYQrCodeScanne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYQrCodeScanne.m; sourceTree = "<group>"; };
+		843C27671D1BBB2800DD94EF /* UIImage+SYGenerateQrCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SYGenerateQrCode.h"; sourceTree = "<group>"; };
+		843C27681D1BBB2800DD94EF /* UIImage+SYGenerateQrCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SYGenerateQrCode.m"; sourceTree = "<group>"; };
+		843C27691D1BBB2800DD94EF /* UIImage+SYQrCodeDiversification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SYQrCodeDiversification.h"; sourceTree = "<group>"; };
+		843C276A1D1BBB2800DD94EF /* UIImage+SYQrCodeDiversification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SYQrCodeDiversification.m"; sourceTree = "<group>"; };
+		843C276B1D1BBB2800DD94EF /* UIImage+SYRoundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SYRoundImage.h"; sourceTree = "<group>"; };
+		843C276C1D1BBB2800DD94EF /* UIImage+SYRoundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SYRoundImage.m"; sourceTree = "<group>"; };
+		843C276D1D1BBB2800DD94EF /* whiteBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteBG.png; sourceTree = "<group>"; };
+		843C276E1D1BBB2800DD94EF /* 扫描框@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "扫描框@2x.png"; sourceTree = "<group>"; };
+		843C276F1D1BBB2800DD94EF /* 扫描线@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "扫描线@2x.png"; sourceTree = "<group>"; };
+		843C277C1D1BBF8C00DD94EF /* backImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backImage.png; sourceTree = "<group>"; };
+		843C277D1D1BBF8C00DD94EF /* 形状222.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "形状222.png"; sourceTree = "<group>"; };
+		843C277E1D1BBF8C00DD94EF /* 形状111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "形状111.png"; sourceTree = "<group>"; };
 		847551CF1C522F67004EA93C /* QrCodeTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QrCodeTest-Prefix.pch"; sourceTree = "<group>"; };
 		847554991C523A8C004EA93C /* ZXAztecDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXAztecDecoder.h; sourceTree = "<group>"; };
 		8475549A1C523A8C004EA93C /* ZXAztecDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXAztecDecoder.m; sourceTree = "<group>"; };
@@ -826,6 +862,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843C275D1D1BBB2800DD94EF /* SYQrCode */ = {
+			isa = PBXGroup;
+			children = (
+				843C275E1D1BBB2800DD94EF /* 85923.png */,
+				843C275F1D1BBB2800DD94EF /* 85923Select.png */,
+				843C27601D1BBB2800DD94EF /* back.png */,
+				843C27611D1BBB2800DD94EF /* photoImage.png */,
+				843C27621D1BBB2800DD94EF /* SYColorModel.h */,
+				843C27631D1BBB2800DD94EF /* SYColorModel.m */,
+				843C27641D1BBB2800DD94EF /* SYQrCode.h */,
+				843C27651D1BBB2800DD94EF /* SYQrCodeScanne.h */,
+				843C27661D1BBB2800DD94EF /* SYQrCodeScanne.m */,
+				843C27671D1BBB2800DD94EF /* UIImage+SYGenerateQrCode.h */,
+				843C27681D1BBB2800DD94EF /* UIImage+SYGenerateQrCode.m */,
+				843C27691D1BBB2800DD94EF /* UIImage+SYQrCodeDiversification.h */,
+				843C276A1D1BBB2800DD94EF /* UIImage+SYQrCodeDiversification.m */,
+				843C276B1D1BBB2800DD94EF /* UIImage+SYRoundImage.h */,
+				843C276C1D1BBB2800DD94EF /* UIImage+SYRoundImage.m */,
+				843C276D1D1BBB2800DD94EF /* whiteBG.png */,
+				843C276E1D1BBB2800DD94EF /* 扫描框@2x.png */,
+				843C276F1D1BBB2800DD94EF /* 扫描线@2x.png */,
+			);
+			path = SYQrCode;
+			sourceTree = "<group>";
+		};
 		847554961C523A8B004EA93C /* ZXingObjC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1569,6 +1630,7 @@
 		84EE595C1C17FADE00045FCD /* 仿支付宝 */ = {
 			isa = PBXGroup;
 			children = (
+				843C275D1D1BBB2800DD94EF /* SYQrCode */,
 				847554961C523A8B004EA93C /* ZXingObjC */,
 				84EE59FB1C19842700045FCD /* libqrencode */,
 				84EE59CF1C18000200045FCD /* Masonry */,
@@ -1594,6 +1656,9 @@
 		84EE595D1C17FADE00045FCD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				843C277C1D1BBF8C00DD94EF /* backImage.png */,
+				843C277D1D1BBF8C00DD94EF /* 形状222.png */,
+				843C277E1D1BBF8C00DD94EF /* 形状111.png */,
 				84EE595E1C17FADE00045FCD /* main.m */,
 				847551CF1C522F67004EA93C /* QrCodeTest-Prefix.pch */,
 			);
@@ -1741,6 +1806,7 @@
 				TargetAttributes = {
 					84EE59591C17FADE00045FCD = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = AYY8UVXJA7;
 					};
 					84EE59721C17FADF00045FCD = {
 						CreatedOnToolsVersion = 7.1;
@@ -1777,9 +1843,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843C277F1D1BBF8C00DD94EF /* backImage.png in Resources */,
+				843C277B1D1BBB2800DD94EF /* 扫描线@2x.png in Resources */,
 				84EE59EA1C18000200045FCD /* Info.plist in Resources */,
+				843C27801D1BBF8C00DD94EF /* 形状222.png in Resources */,
+				843C277A1D1BBB2800DD94EF /* 扫描框@2x.png in Resources */,
+				843C27711D1BBB2800DD94EF /* 85923Select.png in Resources */,
 				84EE596D1C17FADF00045FCD /* LaunchScreen.storyboard in Resources */,
+				843C27701D1BBB2800DD94EF /* 85923.png in Resources */,
+				843C27721D1BBB2800DD94EF /* back.png in Resources */,
+				843C27811D1BBF8C00DD94EF /* 形状111.png in Resources */,
+				843C27791D1BBB2800DD94EF /* whiteBG.png in Resources */,
 				84EE596A1C17FADF00045FCD /* Assets.xcassets in Resources */,
+				843C27731D1BBB2800DD94EF /* photoImage.png in Resources */,
 				84EE59681C17FADF00045FCD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1820,6 +1896,7 @@
 				84EE59F01C18000200045FCD /* MASViewConstraint.m in Sources */,
 				847556811C523A8C004EA93C /* ZXAztecDetector.m in Sources */,
 				847557091C523A8C004EA93C /* ZXRSSDataCharacter.m in Sources */,
+				843C27781D1BBB2800DD94EF /* UIImage+SYRoundImage.m in Sources */,
 				8475573C1C523A8C004EA93C /* ZXPDF417Common.m in Sources */,
 				847556FE1C523A8C004EA93C /* ZXRSSExpandedDecodedInformation.m in Sources */,
 				84EE5A121C19842700045FCD /* rscode.c in Sources */,
@@ -1844,6 +1921,7 @@
 				847556E51C523A8C004EA93C /* ZXDataMatrixSymbolInfo144.m in Sources */,
 				8475569B1C523A8C004EA93C /* ZXISBNResultParser.m in Sources */,
 				847556E01C523A8C004EA93C /* ZXDataMatrixEdifactEncoder.m in Sources */,
+				843C27771D1BBB2800DD94EF /* UIImage+SYQrCodeDiversification.m in Sources */,
 				8475570D1C523A8C004EA93C /* ZXCodaBarReader.m in Sources */,
 				847556C41C523A8C004EA93C /* ZXGridSampler.m in Sources */,
 				847557231C523A8C004EA93C /* ZXUPCEANExtensionSupport.m in Sources */,
@@ -1857,6 +1935,7 @@
 				8475569A1C523A8C004EA93C /* ZXISBNParsedResult.m in Sources */,
 				847556DB1C523A8C004EA93C /* ZXDataMatrixDetector.m in Sources */,
 				847556BC1C523A8C004EA93C /* ZXBitSource.m in Sources */,
+				843C27741D1BBB2800DD94EF /* SYColorModel.m in Sources */,
 				847556991C523A8C004EA93C /* ZXGeoResultParser.m in Sources */,
 				847556941C523A8C004EA93C /* ZXEmailAddressResultParser.m in Sources */,
 				847556DF1C523A8C004EA93C /* ZXDataMatrixDefaultPlacement.m in Sources */,
@@ -1945,6 +2024,7 @@
 				847556EF1C523A8C004EA93C /* ZXGenericMultipleBarcodeReader.m in Sources */,
 				8475573B1C523A8C004EA93C /* ZXPDF417HighLevelEncoder.m in Sources */,
 				847557151C523A8C004EA93C /* ZXEAN13Writer.m in Sources */,
+				843C27751D1BBB2800DD94EF /* SYQrCodeScanne.m in Sources */,
 				847557101C523A8C004EA93C /* ZXCode128Writer.m in Sources */,
 				8475568C1C523A8C004EA93C /* ZXAbstractDoCoMoResultParser.m in Sources */,
 				847556801C523A8C004EA93C /* ZXAztecDecoder.m in Sources */,
@@ -2025,6 +2105,7 @@
 				847556EC1C523A8C004EA93C /* ZXMaxiCodeDecoder.m in Sources */,
 				847556F41C523A8C004EA93C /* ZXAI01393xDecoder.m in Sources */,
 				84EE59F41C18000200045FCD /* ViewController+MASAdditions.m in Sources */,
+				843C27761D1BBB2800DD94EF /* UIImage+SYGenerateQrCode.m in Sources */,
 				8475571C1C523A8C004EA93C /* ZXMultiFormatUPCEANReader.m in Sources */,
 				847556881C523A8C004EA93C /* ZXAztecToken.m in Sources */,
 				84EE59F31C18000200045FCD /* View+MASAdditions.m in Sources */,
@@ -2187,13 +2268,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaohan Duan (68A72LBS8X)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/仿支付宝/QrCodeTest-Prefix.pch";
 				INFOPLIST_FILE = "仿支付宝/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zhangguobing.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "00ffdc81-1e4a-40a9-8407-036fbd1e13b2";
+				PROVISIONING_PROFILE = "32b5564a-5d35-4fc8-a9d9-075d8fc3c913";
 			};
 			name = Debug;
 		};
@@ -2201,13 +2283,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaohan Duan (68A72LBS8X)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/仿支付宝/QrCodeTest-Prefix.pch";
 				INFOPLIST_FILE = "仿支付宝/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zhangguobing.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "00ffdc81-1e4a-40a9-8407-036fbd1e13b2";
+				PROVISIONING_PROFILE = "32b5564a-5d35-4fc8-a9d9-075d8fc3c913";
 			};
 			name = Release;
 		};

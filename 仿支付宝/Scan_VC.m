@@ -16,7 +16,6 @@ static const CGFloat kMargin = 30;
 
 @interface Scan_VC ()<UIAlertViewDelegate,AVCaptureMetadataOutputObjectsDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>{
     
-    
 }
 @property (nonatomic, strong) AVCaptureSession *session;
 @property (nonatomic, weak)   UIView *maskView;
@@ -250,14 +249,17 @@ static const CGFloat kMargin = 30;
     /**这种方法是ios8之后提供的方法，ios8之前是不能用的,我尝试用之前的第三方去替代结果表示并不是很理想，很显然系统提供的api无论是从识别效率还是识别准确度上都要比第三方的强，我尝试用一个自定义背景色的二维码去被识别但是第三方提取不到信息，系统的可以提取到。这里说的取不到是在系统从相册中提取原图的时候上面的二维码信息提取不到，但是我这里把相册的编辑属性打开，取编辑之后的图片之后奇迹般的获取到了信息，真是奇葩 */
     //1.获取选择的图片
     UIImage *pickImage =[info objectForKey:@"UIImagePickerControllerEditedImage"];
+    UIImageWriteToSavedPhotosAlbum(pickImage, nil, nil, nil);
    
     [picker dismissViewControllerAnimated:YES completion:^{
         
         [self decodeImage:pickImage];
+        
     }];
     
     
 }
+
 /**识别图片中的二维码信息 */
 -(void)decodeImage:(UIImage*)image{
     /**这里你完全可以向下兼容没必要用ios8以上的api但是这里这么写主要是为了介绍ios8后提供的这个api，而且性能和识别率要高于第三方 */
