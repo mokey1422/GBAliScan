@@ -13,7 +13,7 @@
 #直接上效果图吧：<br>
 
 ![](https://github.com/mokey1422/gifResourceOther/blob/master/GBAliScan.gif)
-![](https://github.com/mokey1422/gifResourceOther/blob/master/2016-06-23%2022_16_30.gif)<br>
+![](https://github.com/mokey1422/gifResourceOther/blob/master/2016-06-23%2022_43_35.gif)<br>
 ###补充说明：<br>
 * 录制gif图的时候忘记了一步操作，就是二维码图片长按触发识别操作。这点在效果图上没有显示出来，自己看项目中的代码吧，很简单<br>
 * 特别说明demo中用到的识别图片的api是苹果在ios8之后才开放出来的所以这里没有好的原生的解决方案的话就暂时用之前的三方替代一下吧推荐一个还一直在更新的库[ZXingObjC](https://github.com/TheLevelUp/ZXingObjC.git)，之前的zxing和zbar都已经断更很久了这个还一直在更新需要的自己去下载一下 <br>
